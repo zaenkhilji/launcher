@@ -1,4 +1,4 @@
-package net.varago.components.actions.impl;
+package net.varago.components.actions;
 
 public abstract class Action {
 

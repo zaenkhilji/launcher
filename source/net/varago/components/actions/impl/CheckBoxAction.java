@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.SwingUtilities;
 
+import net.varago.components.actions.Action;
 import net.varago.components.impl.CheckBox;
 
 public class CheckBoxAction extends Action {

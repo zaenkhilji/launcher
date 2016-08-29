@@ -8,6 +8,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import net.varago.utils.Utils;
+
 public class Launcher {
 
 	/**
@@ -16,7 +18,11 @@ public class Launcher {
 
 	private JFrame frame;
 
+	private static long bootTime;
+
 	public static void main(String[] args) {
+		bootTime = System.currentTimeMillis();
+		System.out.println("Attempting to launch " + Settings.NAME + "...");
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -27,6 +33,9 @@ public class Launcher {
 				}
 			}
 		});
+		System.err.println(Settings.NAME + " has launched - took "
+				+ (Utils.currentTimeMillis() - bootTime)
+				+ " milliseconds to launch.");
 	}
 
 	public Launcher() {
